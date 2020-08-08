@@ -23,8 +23,8 @@ EXPOSE 25565
 
 # Copy the rest of your app's source code from your host to your image filesystem.
 # COPY ${PATH_TO_DATA} ./
-COPY data\startup.sh /home/minecraft/startup.sh
-COPY data\eula.txt /home/minecraft/eula.txt
+COPY data/startup.sh /home/minecraft/startup.sh
+COPY data/eula.txt /home/minecraft/eula.txt
 
 CMD sh `
 && java -Xms3G -Xmx3G -jar latest.jar

@@ -1,0 +1,3 @@
+# This file is for ignoring files when creating a docker container
+.gitattributes
+LICENSE
