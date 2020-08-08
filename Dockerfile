@@ -16,7 +16,7 @@ RUN addgroup -g 1000 minecraft `
 
 EXPOSE 25565
 
-COPY data /home/minecraft/
+COPY ./data/ /home/minecraft/
 
 CMD sh `
 && java -Xms3G -Xmx3G -jar latest.jar

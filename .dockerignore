@@ -1,3 +1,4 @@
-# This file is for ignoring files when creating a docker container
+# A file used to specify what files will not be copied to the docker container
+# In this case the docker container will not have the github license and attributes files
 .gitattributes
 LICENSE
