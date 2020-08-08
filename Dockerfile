@@ -1,11 +1,9 @@
 # escape=`
 
-# Use the official image as a parent image.
 FROM openjdk:8-alpine
 
 LABEL name='Minecraft Server' author='Grant Lemons'
 
-# Set the working directory.
 WORKDIR /home/minecraft
 
 RUN addgroup -g 1000 minecraft `
@@ -18,5 +16,6 @@ EXPOSE 25565
 
 COPY ./data/ /home/minecraft/
 
-CMD sh `
-&& startup.sh
+RUN chmod 700 /home/minecraft/startup.sh
+
+CMD ./startup.sh
