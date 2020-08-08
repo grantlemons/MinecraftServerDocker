@@ -19,4 +19,4 @@ EXPOSE 25565
 COPY ./data/ /home/minecraft/
 
 CMD sh `
-&& java -Xms3G -Xmx3G -jar latest.jar
+&& startup.sh

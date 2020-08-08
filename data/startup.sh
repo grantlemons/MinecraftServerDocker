@@ -1,1 +1,1 @@
-java -Xms3G -Xmx3G -jar latest.jar
+java -Xms1G -Xmx1G -jar latest.jar
