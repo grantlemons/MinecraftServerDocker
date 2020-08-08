@@ -16,15 +16,7 @@ RUN addgroup -g 1000 minecraft `
 
 EXPOSE 25565
 
-# Run the specified command within the container.
-# CMD java -Xms3G -Xmx3G -jar home/minecraft/paper.jar
-
-# ENV PATH_TO_DATA "C:\Users\Grant Lemons\Documents\Code\Docker\Minecraft\data"
-
-# Copy the rest of your app's source code from your host to your image filesystem.
-# COPY ${PATH_TO_DATA} ./
-COPY data/startup.sh /home/minecraft/startup.sh
-COPY data/eula.txt /home/minecraft/eula.txt
+COPY data /home/minecraft/
 
 CMD sh `
 && java -Xms3G -Xmx3G -jar latest.jar
